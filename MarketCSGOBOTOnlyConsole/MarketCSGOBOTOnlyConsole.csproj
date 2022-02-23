@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECB8A8C0-9BC1-440A-94F8-29C235F1033D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MarketCSGOBOTOnlyConsole</RootNamespace>
+    <AssemblyName>MarketCSGOBOTOnlyConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseGetMarketApi.cs" />
+    <Compile Include="BaseViewModel.cs" />
+    <Compile Include="KeyContorller.cs" />
+    <Compile Include="MarketApi.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="response\acc\get-money.cs" />
+    <Compile Include="response\acc\GetCounters.cs" />
+    <Compile Include="response\acc\GetDiscounts.cs" />
+    <Compile Include="response\acc\marketping.cs" />
+    <Compile Include="response\acc\SetToken.cs" />
+    <Compile Include="response\Orders\DeleteOrders.cs" />
+    <Compile Include="response\Orders\GetOrders.cs" />
+    <Compile Include="response\Orders\GetOrdersLog.cs" />
+    <Compile Include="response\Orders\InsertOrders.cs" />
+    <Compile Include="response\Orders\ProcessOrder.cs" />
+    <Compile Include="response\Orders\StatusOrders.cs" />
+    <Compile Include="response\Orders\UpdateOrder.cs" />
+    <Compile Include="response\item\add-to-sale.cs" />
+    <Compile Include="response\item\buy-items.cs" />
+    <Compile Include="response\item\GetItemsToGive.cs" />
+    <Compile Include="response\item\ItemInfo.cs" />
+    <Compile Include="response\item\ItemRequest.cs" />
+    <Compile Include="response\item\ListItems.cs" />
+    <Compile Include="response\item\my-inventory.cs" />
+    <Compile Include="response\item\remove-all-from-sale.cs" />
+    <Compile Include="response\item\search-item-by-hash-name-specific.cs" />
+    <Compile Include="response\item\set-price.cs" />
+    <Compile Include="response\item\SetPrice.cs" />
+    <Compile Include="response\item\trade\trade-request-give.cs" />
+    <Compile Include="response\item\update-inventory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
